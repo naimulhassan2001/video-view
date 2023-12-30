@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+
+
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:tag="stop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@id/favourite"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/profile" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/add"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_above="@id/favourite"
+            android:layout_alignStart="@+id/profile_image"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/circle"
+
+            android:padding="4dp"
+            android:src="@drawable/add" />
+
+
+        <ImageView
+            android:id="@+id/favourite"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@id/comments"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="5dp"
+            android:src="@drawable/favourite"
+
+            />
+
+        <TextView
+            android:id="@+id/like_count"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/comments"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:paddingBottom="6dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="14dp"
+
+
+            tools:ignore="TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/comments"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@id/share"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/comment"
+
+            />
+
+        <TextView
+            android:id="@+id/comments_count"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/share"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="4dp"
+            android:paddingBottom="4dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="14dp"
+
+
+            tools:ignore="TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@id/download"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="5dp"
+            android:src="@drawable/share"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/download"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="4dp"
+            android:paddingBottom="4dp"
+            android:text="Share"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+
+
+            tools:ignore="TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/download"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@id/song_image"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/download" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/song_image"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="4dp"
+            android:paddingBottom="4dp"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+
+            tools:ignore="TextSizeCheck" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/song_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/white_circle"
+            android:padding="6dp"
+            android:src="@drawable/disk" />
+
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/description"
+            android:paddingStart="20dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingBottom="4dp"
+            android:text="\@Developer2543"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/song_name"
+            android:layout_marginEnd="60dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="20dp"
+            android:text="description description description description description description description description description description "
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:textStyle="bold"
+
+
+            tools:ignore="TextSizeCheck" />
+
+
+        <TextView
+            android:id="@+id/song_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:drawableLeft="@drawable/music"
+            android:drawablePadding="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginEnd="80dp"
+            android:paddingStart="20dp"
+            android:text="Which one is your favourite"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:textStyle="bold"
+
+            tools:ignore="TextSizeCheck" />
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
